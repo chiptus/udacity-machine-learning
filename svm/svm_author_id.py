@@ -26,6 +26,7 @@ print "features train size: ", len(features_train)
 print "labels train size: ", len(labels_train)
 
 
+
 #########################################################
 ### your code goes here ###
 from sklearn.svm import SVC
@@ -38,8 +39,11 @@ t1 = time()
 preds = clf.predict(features_test)
 print "predicition", time() - t1, "s"
 
-from sklearn.metrics import accuracy_score
-print accuracy_score(labels_test, preds)
+print len([item for item in preds if (item == 1)])
+
+
+# from sklearn.metrics import accuracy_score
+# print accuracy_score(labels_test, preds)
 #########################################################
 
 
