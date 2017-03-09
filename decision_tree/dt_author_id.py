@@ -32,12 +32,12 @@ def create_classifier(min_samples_split=40):
     return DecisionTreeClassifier(min_samples_split=min_samples_split)
 
 def train_classifier(clf, features_train, labels_train):
-clf.fit(features_train, labels_train)
+    clf.fit(features_train, labels_train)
     return clf
 
 def calc_accuracy(trained_clf, features_test, labels_test):
     from sklearn.metrics import accuracy_score
-    preds = train_classifier.predict(features_test)
+    preds = trained_clf.predict(features_test)
     return accuracy_score(labels_test, preds)
 
 clf = create_classifier()
