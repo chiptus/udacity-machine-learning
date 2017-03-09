@@ -31,8 +31,8 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
-
-
+# from k_nearest_neighbors.create_and_train import create_and_train
+# clf = create_and_train(features_train, features_train)
 
 
 
