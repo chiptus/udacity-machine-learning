@@ -19,4 +19,23 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+# print enron_data['PRENTICE JAMES']['total_stock_value']
+def max_key(dict, key):
+    import operator
+    index, value = max()
+    return (index, value)
 
+# total = [(k, v['total_payments']) for k,v in enron_data.iteritems() if (k == "SKILLING JEFFREY K" or 'LAY' in k or 'FASTOW' in k)]
+
+# print max(total)
+# print ([k for k,v in enron_data.iteritems() if (v['poi'] == 1)]);
+
+# print (len([k for k,v in enron_data.iteritems() if (v['poi'] != 'NaN')]))
+
+iter_enron = enron_data.iteritems()
+
+poi = ([(k,v) for k,v in iter_enron if (v['poi'] == True)])
+poi_no_pay = [(v['total_payments']) for k,v in poi ]
+# if (v['total_payments'] == 'NaN')
+no_total_payments = [k for k,v in enron_data.iteritems() if (v['total_payments'] == 'NaN')]
+print len(poi)
