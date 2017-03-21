@@ -16,5 +16,8 @@ def get_range(data_dict, key):
 
 
 
-
+print "exercised_stock_options"
 get_range(data_dict, "exercised_stock_options")
+
+print "salary"
+get_range(data_dict, "salary")
